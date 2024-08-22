@@ -1,0 +1,55 @@
+﻿<Window x:Name="frmLocations1" x:Class="MultiLocations1884.frmLocations"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultiLocations1884"
+        mc:Ignorable="d"
+        Title="Locations" Height="650" Width="850" WindowStartupLocation="CenterScreen" Loaded="frmLocations1_Loaded" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="lblNoLocation" Grid.Column="2" Grid.Row="0" Content="Numéro de location" FontSize="22px" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBox x:Name="txtNoLocation" Grid.Column="2" Grid.Row="1" Height="35" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lblIdClient" Grid.Column="1" Grid.Row="3" Content="Id du client :" FontSize="15px" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtIdClient" Grid.Column="2" Grid.Row="3" Height="30" IsReadOnly="True"/>
+        <Label x:Name="lblNIV" Grid.Column="1" Grid.Row="4" Content="NIV du véhicule :" FontSize="15px" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <ComboBox x:Name="lstNIV" Grid.Column="2" Grid.Row="4" Height="30px" DisplayMemberPath="NIV" SelectedValuePath="NIV" Visibility="Hidden"/>
+        <TextBox x:Name="txtNIV" Grid.Column="2" Grid.Row="4" Height="30px" IsReadOnly="True"/>
+        <Label x:Name="lblNoTerme" Grid.Column="1" Grid.Row="5" Content="Numéro du terme :" FontSize="15px" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <ComboBox x:Name="lstNoTerme" Grid.Column="2" Grid.Row="5" Height="30px" DisplayMemberPath="NoTerme" SelectedValuePath="NoTerme" IsEnabled="False"/>
+        <Label x:Name="lblDateDebutLoc" Grid.Column="1" Grid.Row="6" Content="Début de location :" FontSize="15px" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <DatePicker x:Name="txtDateDebutLoc" Grid.Column="2" Grid.Row="6" Height="30px" IsEnabled="False"/>
+        <Label x:Name="lblDatePremPaiement" Grid.Column="1" Grid.Row="7" Content="Premier paiement :" FontSize="15px" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <DatePicker x:Name="txtDatePremPaiement" Grid.Column="2" Grid.Row="7" Height="30px" IsEnabled="False"/>
+        <Label x:Name="lblMontantMensuel" Grid.Column="1" Grid.Row="8" Content="Montant mensuel :" FontSize="15px" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtMontantMensuel" Grid.Column="2" Grid.Row="8" Height="30px" IsReadOnly="True"/>
+        <Label x:Name="lblNbPaiementsMensuel" Grid.Column="1" Grid.Row="9" Content="Nombre de paiements mensuels :" FontSize="15px" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtNbPaiementsMensuel" Grid.Column="2" Grid.Row="9" Height="30px" IsReadOnly="True"/>
+        <Label x:Name="lblOdomètre" Grid.Column="1" Grid.Row="10" Content="Odomètre au retour(km) :" FontSize="15px" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtOdomètre" Grid.Column="2" Grid.Row="10" Height="30px" IsReadOnly="True"/>
+        <Button x:Name="btnEnregistrer" Content="Enregistrer" Grid.Column="2" Grid.Row="11" Width="80" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Click="btnEnregistrer_Click"/>
+        <Button x:Name="btnAnnuler" Content="Annuler" Grid.Column="2" Grid.Row="11" Width="80" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" Click="btnAnnuler_Click"/>
+        <Button x:Name="btnRechercher" Content="Rechercher" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" Height="30px" Width="80px" VerticalAlignment="Top" Margin="5" Click="btnRechercher_Click"/>
+        <Button x:Name="btnNouveau" Content="Nouveau" Grid.Column="3" Grid.Row="1" Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5" Click="btnNouveau_Click"/>
+
+    </Grid>
+</Window>
